@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e2a;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/bg-stars.svg');
+}
+
+.header {
+    position: relative;
+    top: 15%;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 7.5px;
+}
+
+.countdown-container {
+    max-width: 660px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+    translate: 0 -50%;
+    margin: auto;
+}
+
+.countdown-box {
+    width: calc((100% - 3 * 20px) / 4);
+}
+
+.time-period-box {
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 15px #1a1a23;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+}
+
+.flip-card {
+    position: absolute;
+    top: 0;
+}
+
+.top,
+.bottom {
+    width: 100%;
+    height: 50%;
+    line-height: 150px;
+    font-size: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    background-color: #2c2c44;
+    color: #d84d72;
+    align-items: flex-start;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bottom {
+    background-color: #34364f;
+    color: #fa5f83;
+    align-items: flex-end;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.flip-card .top {
+    animation: flip-top 0.5s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes flip-top {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.flip-card .bottom {
+    animation: flip-bottom 0.5s ease-out 0.5s forwards;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.middle-line-decoration {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+.half-circle {
+    width: 5px;
+    height: 10px;
+    background-color: #1a1a23;
+    border-top-right-radius: 100% 50%;
+    border-bottom-right-radius: 100% 50%;
+}
+
+.half-circle.right {
+    rotate: 180deg;
+    position: relative;
+    right: 0;
+}
+
+.single-line {
+    height: 5px;
+    width: 100%;
+    border-bottom: 0.1px solid #1a1a23
+}
+
+.period-name {
+    color: #908daa;
+    font-size: 13px;
+    letter-spacing: 7px;
+}
+
+footer {
+    position: absolute;
+    background-image: url('images/pattern-hills.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+}
+
+footer .links {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.fa {
+    color: #8b88ab;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+}
+
+.fa:hover {
+    color: #fa5f83;
+}
