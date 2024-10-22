@@ -20,6 +20,7 @@ main {
 }
 
 .header {
+    padding: 0 10px;
     position: relative;
     top: 15%;
     color: white;
@@ -201,6 +202,11 @@ footer .links {
 }
 
 @media screen and (max-width: 640px) {
+    .header {
+        letter-spacing: 4px;
+        font-size: 15px;
+    }
+
     .countdown-container {
         max-width: 440px;
     }
@@ -223,8 +229,8 @@ footer .links {
 
 @media screen and (max-width: 490px) {
     .header {
-        letter-spacing: 4px;
-        font-size: 14.5px;
+        letter-spacing: 3px;
+        font-size: 14px;
     }
 
     .countdown-container {
