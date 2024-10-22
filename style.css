@@ -171,3 +171,75 @@ footer .links {
 .fa:hover {
     color: #fa5f83;
 }
+
+@media screen and (max-width: 860px) {
+    .header {
+        letter-spacing: 5px;
+    }
+
+    .countdown-container {
+        max-width: 520px;
+    }
+
+    .time-period-box {
+        height: 115px;
+    }
+
+    .top,
+    .bottom {
+        line-height: 115px;
+        font-size: 55px;
+    }
+
+    .period-name {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .countdown-container {
+        max-width: 440px;
+    }
+
+    .time-period-box {
+        height: 95px;
+    }
+
+    .top,
+    .bottom {
+        line-height: 95px;
+        font-size: 48px;
+    }
+
+    .period-name {
+        font-size: 10.5px;
+        letter-spacing: 3.5px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .header {
+        letter-spacing: 4px;
+        font-size: 14.5px;
+    }
+
+    .countdown-container {
+        max-width: 340px;
+    }
+
+    .time-period-box {
+        height: 70px;
+    }
+
+    .top,
+    .bottom {
+        line-height: 70px;
+        font-size: 38px;
+    }
+
+    .period-name {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
