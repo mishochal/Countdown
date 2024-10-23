@@ -2,6 +2,13 @@ const secondsCard = document.querySelector(".seconds .card");
 const minutesCard = document.querySelector(".minutes .card");
 const hoursCard = document.querySelector(".hours .card");
 const daysCard = document.querySelector(".days .card");
+const startBtn = document.querySelector(".start-timer-btn");
+
+const finish = document.querySelector(".finish");
+const finishTop = document.querySelector(".finish-top");
+const bidzoImg = document.querySelector(".bidzina-img-container");
+const poopImg = document.querySelector(".poop-img");
+const tearImg = document.querySelector(".tear-img");
 
 let interval;
 
@@ -34,6 +41,17 @@ const updateComponent = (newTime, card) => {
     }
 }
 
+const finishBidzo = () => {
+    finish.classList.add("added");
+    finishTop.classList.add("added");
+    bidzoImg.classList.add("added");
+    poopImg.classList.add("added");
+    tearImg.classList.add("added");
+
+    let audio = new Audio("/audio/anthem.mp3");
+    audio.play();
+}
+
 const updateTimer = (diff) => {
     if (diff > 0) {
         let daysDiff = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -49,12 +67,16 @@ const updateTimer = (diff) => {
         updateComponent(daysDiff, daysCard);
     } else {
         clearInterval(interval)
+        finishBidzo();
     }
 };
 
 const setTimer = () => {
     // let newYear = new Date(new Date().getFullYear() + 1, 0, 1);
-    let electionsDate = new Date("2024-10-26T22:00:00.000+04:00");
+    startBtn.disabled = "true";
+    startBtn.style.pointerEvents = "none";
+    startBtn.removeEventListener("click", setTimer);
+    let electionsDate = new Date("2023-10-26T22:00:00.000+04:00");
     let currDate;
     interval = setInterval(() => {
         currDate = new Date();
@@ -63,4 +85,4 @@ const setTimer = () => {
     }, 1000);
 }
 
-setTimer();
+startBtn.addEventListener("click", setTimer);
