@@ -76,7 +76,7 @@ const setTimer = () => {
     startBtn.disabled = "true";
     startBtn.style.pointerEvents = "none";
     startBtn.removeEventListener("click", setTimer);
-    let electionsDate = new Date("2023-10-26T22:00:00.000+04:00");
+    let electionsDate = new Date("2024-10-26T22:00:00.000+04:00");
     let currDate;
     interval = setInterval(() => {
         currDate = new Date();
