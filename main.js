@@ -48,7 +48,7 @@ const finishBidzo = () => {
     poopImg.classList.add("added");
     tearImg.classList.add("added");
 
-    let audio = new Audio("/audio/anthem.mp3");
+    let audio = new Audio("audio/anthem.mp3");
     audio.play();
 }
 
