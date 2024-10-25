@@ -184,6 +184,28 @@ main {
     background-color: rgba(0, 0, 0, 0.93);
 }
 
+.reload {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #34364f;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.reload:hover {
+    background-color: #1e1e2a;
+}
+
+
 .finish-top {
     display: flex;
     flex-direction: column;
@@ -193,6 +215,9 @@ main {
     top: 7%;
     opacity: 0;
     transform: translateY(-50%);
+}
+
+.finish-top.animated {
     transition: transform 1s 0.5s ease-in, opacity 1s 0.8s ease-in;
 }
 
@@ -214,6 +239,9 @@ main {
     top: 20%;
     opacity: 0;
     transform: translateY(70vh);
+}
+
+.bidzina-img-container.animated {
     transition: transform 1s 0.5s ease-in, opacity 1s 0.8s ease-in;
 }
 
@@ -235,6 +263,9 @@ main {
     transform: translateX(-50%);
     opacity: 0;
     transform: translateY(-30px);
+}
+
+.poop-img.animated {
     transition: transform 1s 3.5s ease-in, opacity 1s 3s ease-in;
 }
 
@@ -250,7 +281,10 @@ main {
     left: 45%;
     opacity: 0;
     transform: translateY(-5px);
-    transition: transform 1s 5s ease-in, opacity 1s 4.5s ease-in;
+}
+
+.tear-img.animated {
+    transition: transform 1s 5.5s ease-in, opacity 1s 5s ease-in;
 }
 
 .tear-img.added {
